@@ -293,7 +293,7 @@ const assetList = [
 let loaded = 0;
 function loadAssets(cb) {
     assetList.forEach(src => {
-        const img = new Image(); img.src = 'assets/' + src;
+        const img = new Image(); img.src = './assets/' + src;
         img.onload = () => { assets[src] = img; if (++loaded === assetList.length) cb(); };
         img.onerror = () => {
             const c = document.createElement('canvas'); c.width = 128; c.height = 128;
